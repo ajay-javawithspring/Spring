@@ -34,10 +34,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryDto retrieveCategoryById(long categoryId) {
-
         Category category = getCategory(categoryId);
-        int sc = scanner.nextInt();
-
         return modelMapper.map(category, CategoryDto.class);
     }
 
