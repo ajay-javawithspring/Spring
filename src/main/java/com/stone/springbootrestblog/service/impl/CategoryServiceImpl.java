@@ -19,9 +19,8 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
     private CategoryRepository categoryRepository;
-
+    @Autowired
     private Scanner scanner;
-
     @Autowired
     private ModelMapper modelMapper;
     @Override
@@ -37,7 +36,7 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryDto retrieveCategoryById(long categoryId) {
 
         Category category = getCategory(categoryId);
-
+        int sc = scanner.nextInt();
 
         return modelMapper.map(category, CategoryDto.class);
     }
