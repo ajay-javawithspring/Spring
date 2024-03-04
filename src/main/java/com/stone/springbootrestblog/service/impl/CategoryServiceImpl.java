@@ -19,8 +19,6 @@ public class CategoryServiceImpl implements CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    private Util util;
-
     @Autowired
     private ModelMapper modelMapper;
     @Override
