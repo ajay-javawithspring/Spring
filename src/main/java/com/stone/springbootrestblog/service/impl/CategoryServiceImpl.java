@@ -34,6 +34,7 @@ public class CategoryServiceImpl implements CategoryService {
 
         Category category = getCategory(categoryId);
 
+
         return modelMapper.map(category, CategoryDto.class);
     }
 
