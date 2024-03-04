@@ -5,6 +5,7 @@ import com.stone.springbootrestblog.exception.ResourceNotFoundException;
 import com.stone.springbootrestblog.payload.CategoryDto;
 import com.stone.springbootrestblog.repository.CategoryRepository;
 import com.stone.springbootrestblog.service.CategoryService;
+import jdk.jshell.execution.Util;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,8 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
     private CategoryRepository categoryRepository;
+
+    private Util util;
 
     @Autowired
     private ModelMapper modelMapper;
