@@ -5,11 +5,13 @@ import com.stone.springbootrestblog.exception.ResourceNotFoundException;
 import com.stone.springbootrestblog.payload.CategoryDto;
 import com.stone.springbootrestblog.repository.CategoryRepository;
 import com.stone.springbootrestblog.service.CategoryService;
+import jdk.jshell.execution.Util;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 @Service
@@ -17,7 +19,8 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
     private CategoryRepository categoryRepository;
-
+    @Autowired
+    private Scanner scanner;
     @Autowired
     private ModelMapper modelMapper;
     @Override
@@ -31,9 +34,7 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryDto retrieveCategoryById(long categoryId) {
-
         Category category = getCategory(categoryId);
-
         return modelMapper.map(category, CategoryDto.class);
     }
 
