@@ -8,6 +8,7 @@ import com.stone.springbootrestblog.service.CategoryService;
 import jdk.jshell.execution.Util;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

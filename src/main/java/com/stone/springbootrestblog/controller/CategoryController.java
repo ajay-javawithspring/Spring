@@ -26,7 +26,6 @@ public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
-
     @Operation(
             summary = "Create Category API",
             description = "Create Category API is used to save Category in Database"
